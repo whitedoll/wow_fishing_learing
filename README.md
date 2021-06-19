@@ -1,4 +1,11 @@
 # Wow fishing float detect
 
-![media_images_Validation_499_1](https://user-images.githubusercontent.com/60419530/122632483-06471080-d10e-11eb-840f-635a516d90c3.jpg)
-This project use YOLOv5 object detection
+![0001](https://user-images.githubusercontent.com/60419530/122636445-431e0200-d124-11eb-957e-4c808863351f.jpg)
+This project use [YOLOv5 object detection.](https://github.com/ultralytics/yolov5) You can find floats in various environments in the game.
+
+# Inference with detect.py
+You can use the pre-trained model best.pt to find a float. The requirements for [YOLOv5 object detection.](https://github.com/ultralytics/yolov5) can be installed by following the guide of the official site.
+
+    python3 detect.py --source test/ --weights best.pt
+
+# Training
