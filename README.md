@@ -13,10 +13,22 @@ The result save on "run/dectact"
 
 # Training
 The prepared datasets are wow_fish.zip, z01, and z02. you can check the following structure after unzipping the compressed file. 
-    wow_fish
-    ├── Annotations
+```bash
+.
+└── wow_fish/
+    ├── Annotations/
     │   └── *.xml
-    ├── images
+    ├── images/
     │   └── *.jpg
-    ├── labels
-    │   └── *.txt
+    └── labels/
+        └── *.txt     
+```
+Run commands below to produce results on wow_fish dataset
+```bash
+python3 train.py --data wow_fish.yaml --weights yolov5s.pt --batch 24
+                                                yolov5m.pt
+                                                yolov5l.pt
+                                                yolov5x.pt
+```
+Also, you can create xml data using [labelImg](https://github.com/tzutalin/labelImg) to create your own dataset.
+xml data needs to be changed to text in accordance with YOLO labeling, and it can be changed using [xml-to-csv.py.](https://github.com/whitedoll/wow_fishing_learing/blob/main/xml-to-csv.py)
